@@ -19540,7 +19540,7 @@ RESPONSIVE STYLES
       font-size: 24px;
       line-height: 32px;
   }
-  .blog-item {
+  html body .blog-item {
       height: 400px;
   }
 }
@@ -19579,7 +19579,7 @@ RESPONSIVE STYLES
       top: 100px;
       height: calc(100% - 100px);
   }
-  .blog-item {
+  html body .blog-item {
       width: 100%;
   }
   .blog-filter {
@@ -19604,6 +19604,22 @@ RESPONSIVE STYLES
   html body article.category-news.blog-item,
   html body .masonry.classic_enhanced article.category-news.blog-item {
       height: auto !important;
+  }
+  .blog-item.category-podcast {
+      display: block;
+  }
+  html body .wktshow-logo {
+      width: 50%;
+      padding: 0;
+  }
+  .blog-item.category-podcast .blog-item-content {
+      width: 100%;
+      padding-left: 0;
+      border: 0;
+  }
+  .blog-item.category-podcast h3 {
+      font-size: 25px;
+      margin-top: 0;
   }
   
 
