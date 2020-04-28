@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('GothamPro-MediumItalic.eot');
+    src: url('GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro-MediumItalic.woff2') format('woff2'),
+        url('GothamPro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('GothamPro-Light.eot');
+    src: url('GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro-Light.woff2') format('woff2'),
+        url('GothamPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('GothamPro-LightItalic.eot');
+    src: url('GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro-LightItalic.woff2') format('woff2'),
+        url('GothamPro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('GothamPro-Medium.eot');
+    src: url('GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro-Medium.woff2') format('woff2'),
+        url('GothamPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('GothamPro-Black.eot');
+    src: url('GothamPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro-Black.woff2') format('woff2'),
+        url('GothamPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('GothamPro-Bold.eot');
+    src: url('GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro-Bold.woff2') format('woff2'),
+        url('GothamPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('GothamPro.eot');
+    src: url('GothamPro.eot?#iefix') format('embedded-opentype'),
+        url('GothamPro.woff2') format('woff2'),
+        url('GothamPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

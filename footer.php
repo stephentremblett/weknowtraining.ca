@@ -1,0 +1,83 @@
+<?php
+/**
+* The template for displaying the footer.
+*
+* @package Salient WordPress Theme
+* @version 10.5
+*/
+
+// Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+$nectar_options = get_nectar_theme_options();
+$header_format  = ( !empty($nectar_options['header_format']) ) ? $nectar_options['header_format'] : 'default';
+
+?>
+
+<div id="footer-outer" <?php nectar_footer_attributes(); ?>>
+	
+	<?php
+	
+	get_template_part( 'includes/partials/footer/call-to-action' );
+	
+	get_template_part( 'includes/partials/footer/main-widgets' );
+	
+	get_template_part( 'includes/partials/footer/copyright-bar' );
+	
+	?>
+	
+</div><!--/footer-outer-->
+
+<?php
+
+nectar_hook_before_outer_wrap_close();
+
+get_template_part( 'includes/partials/footer/off-canvas-navigation' );
+
+?>
+
+</div> <!--/ajax-content-wrap-->
+
+<?php
+	
+	// Boxed theme option closing div.
+	if ( ! empty( $nectar_options['boxed_layout'] ) && 
+	'1' === $nectar_options['boxed_layout'] && 
+	'left-header' !== $header_format ) {
+
+		echo '</div><!--/boxed closing div-->'; 
+	}
+	
+	get_template_part( 'includes/partials/footer/back-to-top' );
+	get_template_part( 'includes/partials/footer/body-border' );
+	
+	nectar_hook_after_wp_footer();
+	nectar_hook_before_body_close();
+	
+	wp_footer();
+?>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		
+		var bigbrother = -1;
+
+		$('.blog-item-content').each(function() {
+		bigbrother = bigbrother > $('.blog-item-content').height() ? bigbrother : $('.blog-item-content').height();
+		});
+
+		$('.blog-item-content').each(function() {
+		$('.blog-item-content').height(bigbrother);
+		});
+
+		jQuery('.blog-item.category-podcast .blog-item-content').append('<span class="arr">→</span>');
+		jQuery('.blog-item.category-podcast').prepend('<div class="wktshow-logo"><img src="https://weknowtraining.ca/wp-content/uploads/2020/03/logo-wktShow.svg"/></div>')
+	
+	});
+</script>
+<!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
+<script type="text/javascript" src="https://a.opmnstr.com/app/js/api.min.js" data-account="60223" data-user="53557" async></script>
+<!-- / https://optinmonster.com -->
+</body>
+</html>
