@@ -19125,7 +19125,7 @@ html body .blog-item-content {
   color:#ff004d;
 }
 .blog-item:hover .blog-item-content {
-  border-top:5px solid #ff004d;
+  border-color:#ff004d;
 }
 html body .blog-item-category {
   text-transform: uppercase;
