@@ -19315,6 +19315,7 @@ li.meta-category a:hover {
 }
 li.meta-author {
   margin-bottom: 20px;
+  display:none;
 }
 div.blog-content {
   font-size: 15px;
