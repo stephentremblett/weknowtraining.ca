@@ -35,9 +35,33 @@ $nectar_options = get_nectar_theme_options();
 			</ul>
 		</div>
 
+		<div class="news-grid">
+			<?php
+				$args = array( 'numberposts' => 4, 'category' => 9 );
+				$postslist = get_posts( $args );
+				foreach ($postslist as $post) :  setup_postdata($post); ?>
+				<article <?php post_class( 'blog-item' ); ?>>
+					<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"></a>
+					<!-- grid item content -->
+					<div class="news-item-content">
+						<span class="blog-item-category">
+							<?php $parentscategory ="";
+							foreach((get_the_category()) as $category) {
+							if ($category->category_parent == 0) {
+							$parentscategory .= ' <span>' . $category->name . '</span>, ';
+							}
+							}
+							echo substr($parentscategory,0,-2); ?>
+						</span>
+						<h3><?php the_title(); ?></h3>
+					</div>
+				</article>
+			<?php endforeach; ?>
+		</div>
+
 		<div class="blog-grid">
 			<?php
-				$args = array( 'numberposts' => 25 );
+				$args = array( 'numberposts' => 25, 'category__not_in' => 9 );
 				$postslist = get_posts( $args );
 				foreach ($postslist as $post) :  setup_postdata($post); ?>
 				<article <?php post_class( 'blog-item' ); ?>>
